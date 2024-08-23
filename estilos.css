@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -15,6 +16,7 @@
   --Blanco: #fff;
   --Gris: #5c5c5c;
   --Menta: #aefff4;
+  --Moradito: blueviolet;
 }
 
 .body {
@@ -26,28 +28,30 @@
   height: 100vh;
   margin: 0 auto;
   border-radius: 5px 5px;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--Negro);
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   /* flex-direction: row-reverse; */
   /* flex-direction: column; */
   /* flex-direction: column-reverse; */
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   /* flex-wrap: nowrap; */
   /* flex-flow: column wrap; */
-  /* justify-content: flex-start;
-  justify-content: flex-end; */
-  justify-content: center;
-  /* justify-content: space-between;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: flex-end; */
+  /* justify-content: center;
+  justify-content: space-between;
   justify-content: space-around;
-  justify-content: space-evenly;
-  align-items: end; */
+  justify-content: space-evenly; */
+  align-items: end;
   align-items: center;
+  align-items: space-between;
   /* align-items: stretch; */
 }
 
 .contenedor__ficha {
-  background-color: blueviolet;
+  background-color: var(--Moradito);
   width: 200px;
   height: 200px;
   text-align: center;
@@ -58,4 +62,19 @@
 
 .contenedor__ficha:hover {
   background-color: var(--Menta);
+}
+.contenedor .contenedor__ficha:nth-last-child(2) {
+  background-color: steelblue;
+  order: 1;
+}
+@media (max-width: 800px) {
+  .contenedor {
+    background-color: var(--Rosado);
+    flex-direction: column;
+  }
+  .contenedor .contenedor__ficha:nth-last-child(2) {
+    background-color: steelblue;
+    order: 2;
+    flex-direction: column;
+  }
 }

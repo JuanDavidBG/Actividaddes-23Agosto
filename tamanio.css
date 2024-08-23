@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 350px;
+  height: 650px;
+  margin: 0 auto;
+  background-color: black;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.item {
+  height: 650px;
+  width: calc(350px * 3);
+  background-color: aliceblue;
+  position: relative;
+  display: flex;
+  left: -700px;
+}
+
+.chats {
+  width: 350px;
+  height: 600px;
+  left: -730px;
+}
+
+.chats:nth-child(1) {
+  background-color: green;
+}
+
+.chats:nth-child(2) {
+  background-color: yellow;
+}
+
+.chats:nth-child(3) {
+  background-color: blue;
+}
+
+.tabs {
+  display: flex;
+  height: 60px;
+  justify-content: space-evenly;
+  align-items: center;
+  color: aliceblue;
+}
